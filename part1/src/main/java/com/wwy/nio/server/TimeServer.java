@@ -17,5 +17,10 @@ public class TimeServer {
 
             }
         }
+
+        AsyncTimeServerHandle timeServer = new AsyncTimeServerHandle(port);
+        new Thread(timeServer, "AIO-SERVER-001").start();
     }
+
+
 }
